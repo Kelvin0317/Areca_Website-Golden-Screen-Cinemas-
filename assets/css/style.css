@@ -440,6 +440,11 @@ body {
 	#sections-contest {
 		max-width: 970px;
 	}
+
+	#page_2{
+		display: none;
+	}
+
 	#sections-contest {
 		margin-left: 5px;
 		max-width: calc(102% - 10px) !important;
