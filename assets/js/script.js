@@ -2,6 +2,7 @@ function navbar() {
 	document.getElementById('navbar-collapse').style.marginLeft = "0px";
 	document.getElementById('navbar_background').style.width = "100%";
 	document.getElementById('navbar_background').style.height = "100vh";
+	document.getElementById('html').style.overflow = "hidden";	
 }
 
 function mouseDown(){
@@ -9,6 +10,7 @@ function mouseDown(){
 	document.getElementById('navbar_background').style.width = "0%";
 	document.getElementById('navbar_background').style.height = "0vh";
 	document.getElementById('reponsive').style.display = "none";
+	document.getElementById('html').style.overflow = "";
 }
 
 function movies(){
