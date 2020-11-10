@@ -688,6 +688,9 @@ body {
 	.margin {
 		margin-top: -50px !important;
 	}
+	#navbar-search{
+		display: block !important;
+	}
 }
 
 @media (max-width: 1400px) {

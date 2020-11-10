@@ -269,5 +269,11 @@ function reponsive_close_seacrh() {
 	document.getElementById('reponsive').style.display = "none";
 	document.getElementById('navbar_background').style.width = "0%";
 	document.getElementById('navbar_background').style.height = "0vh";
+	var x = document.getElementById('nav-search');
+	var y = document.getElementById('navbar-search');
+	var z = document.getElementById('search-close');
+		x.style.display = "none";
+		y.style.display = "block";
+		z.style.display = "none";
 }
 
