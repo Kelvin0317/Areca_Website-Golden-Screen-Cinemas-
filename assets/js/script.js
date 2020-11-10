@@ -92,6 +92,7 @@ function promotions() {
 		x.style.width = "115px"
 
 	document.getElementById("page_1").style.display = "block"
+	document.getElementById("page_2").style.display = "none"
 }
 
 function contests() {
@@ -102,6 +103,7 @@ function contests() {
 		x.style.transform = "translate3d(135px, 0px, 0px)";
 		x.style.width = "115px"
 	document.getElementById("page_1").style.display = "none"
+	document.getElementById("page_2").style.display = "none"
 }
 
 function announcements() {
@@ -113,6 +115,7 @@ function announcements() {
 		x.style.transform = "translate3d(270px, 0px, 0px)";
 		x.style.width = "150px"
 	document.getElementById("page_1").style.display = "none"
+	document.getElementById("page_2").style.display = "block"
 }
 
 function All() {
