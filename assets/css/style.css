@@ -389,6 +389,9 @@ body {
 	padding-top: 14px;
 }
 
+#page_2 {
+	display: none ;
+}
 
 @media (min-width: 576px) {
 
@@ -441,9 +444,7 @@ body {
 		max-width: 970px;
 	}
 
-	#page_2{
-		display: none;
-	}
+
 
 	#sections-contest {
 		margin-left: 5px;
