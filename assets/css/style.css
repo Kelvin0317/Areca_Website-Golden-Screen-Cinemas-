@@ -94,6 +94,59 @@ body {
 
 }
 
+.reponsive {
+	position: absolute;
+	width: 100%;
+	top:0;
+	margin-top: 15px;
+	z-index: 10;
+}
+
+#reponsive-search {
+	border: 1px solid none;
+	display: flex;
+	width: 98%;
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 5px;
+	margin-top: -3px;
+	background-color: white;
+}
+
+#reponsive-search:hover{
+	cursor: pointer;
+}
+
+#reponsive-search:hover {
+	border: 1px solid #0f6199;
+}
+
+.reponsive-search-icon{
+	display: block;
+	height: 18px;
+	margin: 6px;
+	float: right;
+}
+
+/*.reponsive-search_input {
+    background : var(--background-light);
+    border: none;
+    color: white;
+}
+
+*/.reponsive-search_input {
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: black;
+  border: none;
+}
+
+.reponsive-search_input:focus {
+  outline: none;
+}
+
 .search_input:focus {
   outline: none;
 }
@@ -101,6 +154,10 @@ body {
 #search-close {
 	display: none;
 	cursor: pointer;
+}
+
+.reponsive-close {
+	padding-top: 3px;
 }
 
 .close-icon {
@@ -144,6 +201,7 @@ body {
 	padding: 16px;
     height: 100%;
     max-height: 100%;
+    z-index: 5;
 }
 
 .navbar_info {
@@ -243,7 +301,9 @@ body {
 }
 
 .section-border {
-	/*border: 1px solid white;*/
+	width: 100%;  
+	overflow-x: auto;
+	max-height: 100%;
 	max-width: 100%;
 }
 
@@ -384,7 +444,7 @@ body {
 #sections-contest {
 	max-width: 1220px;
 	display: grid;
-	grid-template-columns: auto auto auto auto;
+	grid-template-columns: auto auto auto auto ;
 	overflow: hidden;
 	padding-top: 14px;
 }
@@ -393,8 +453,102 @@ body {
 	display: none ;
 }
 
-@media (min-width: 576px) {
+.footer {
+	min-width: var(--min-width);
+	overflow: hidden;
+	padding-top: 30px;
+	padding-left: 130px;
+	padding-right: auto;
+	padding-bottom: 30px;
+	background-color: var(--background-light);
+	border-top: 1px solid var(--border-color);
+}
 
+.footer-word {
+	margin-bottom: 20px;
+	font-family: 300px;
+	font-size: 14px;
+}
+
+.footer-word2 {
+	margin-bottom: 20px;
+	font-size: 12px;
+	color: #999;
+	line-height: 16px;
+}
+
+.yellow {
+	margin-bottom: 20px;
+	font-size: 12px;
+	color: yellow;
+	line-height: 16px;
+}
+
+.footer-word img {
+	width: 1.5em;
+	height: 1.5em;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.footer-icon {
+	width: 3em;
+	height: 1.5em;
+}
+
+.footer-item {
+	max-width: 1400px;
+	display: grid;
+	grid-template-columns: auto auto auto auto 60%;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.footer-box {
+	width: 160px;
+}
+
+.button {
+	display: inline-block;
+	width: 100px;
+	height: 28px;
+	background-color: #fe0;
+	border-radius: 14px;
+	padding: 0 14px;
+	font-size: 12px;
+	line-height: 28px;
+	text-align: center;
+	color: #000;
+}
+
+
+.footer-box {
+	display: grid;
+	grid-template-columns: auto ;
+}
+
+.reponsive {
+	display: none;
+}
+@media (max-width: 450px) {
+	.footer {
+	    padding-left: 15px !important;
+	    transition: 1s;
+	}
+
+	.box {
+		width: 120px !important;
+	}
+}
+
+@media (min-width: 576px) {
+	.footer {
+	    padding-left: 50px !important;
+	    transition: 1s;
+	}
 }
 	
 @media (max-width: 640px) {
@@ -424,6 +578,11 @@ body {
 		grid-template-columns: auto auto auto auto !important;
 		overflow: hidden;
 	}
+	.footer {
+	    padding-left: 90px;
+	    transition: 1s;
+	}
+
 }
 
 @media (max-width: 1024px){
@@ -443,8 +602,6 @@ body {
 	#sections-contest {
 		max-width: 970px;
 	}
-
-
 
 	#sections-contest {
 		margin-left: 5px;
@@ -494,6 +651,43 @@ body {
 	    max-height: 290px !important; 
 	    height: calc(104% - 1px) !important;
 	}
+	.footer {
+		grid-template-columns: auto auto ;
+		padding: auto;
+	}
+
+	.footer-item {
+		max-width: 1400px;
+		display: grid;
+		grid-template-columns: auto;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+	.footer-box {
+		display: grid;
+		grid-template-columns: auto auto ;
+		min-width: 100%;		
+
+	}
+
+	.box {
+		width: 200px;
+	}
+
+	.reponsive {
+		display: none;
+	}
+	#nav-search{
+		display: none !important;
+	}
+	#search-close{
+		display: none !important;
+	}
+	.margin {
+		margin-top: -50px !important;
+	}
 }
 
 @media (max-width: 1400px) {
@@ -527,6 +721,14 @@ body {
 		max-width: 222px ;
 	    margin-top: 26px;
 	}
-
+	.reponsive {
+		display: none;
+	}
+	.margin {
+		margin-top: -160px;
+	}
 }
 
+.margin {
+	margin-top: -160px;
+}

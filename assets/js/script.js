@@ -8,6 +8,7 @@ function mouseDown(){
 	document.getElementById('navbar-collapse').style.marginLeft = "-260px";
 	document.getElementById('navbar_background').style.width = "0%";
 	document.getElementById('navbar_background').style.height = "0vh";
+	document.getElementById('reponsive').style.display = "none";
 }
 
 function movies(){
@@ -69,9 +70,15 @@ function search() {
 	var x = document.getElementById('nav-search');
 	var y = document.getElementById('navbar-search');
 	var z = document.getElementById('search-close');
+	if ((screen.width>1024)) {
 		x.style.display = "flex";
 		y.style.display = "none";
 		z.style.display = "block";
+	} else {
+		document.getElementById('reponsive').style.display = "block ";
+		document.getElementById('navbar_background').style.width = "100%";
+		document.getElementById('navbar_background').style.height = "100vh";
+	}
 }
 
 function close_seacrh() {
@@ -257,3 +264,10 @@ function events() {
 	    promotions_banner1[i].style.display ="none"
 	  }
 }
+
+function reponsive_close_seacrh() {
+	document.getElementById('reponsive').style.display = "none";
+	document.getElementById('navbar_background').style.width = "0%";
+	document.getElementById('navbar_background').style.height = "0vh";
+}
+
