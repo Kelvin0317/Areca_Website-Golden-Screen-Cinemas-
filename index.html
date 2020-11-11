@@ -9,9 +9,11 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- get the data from promotion.json -->
+	<script type="text/javascript" src="./assets/db/promotion.json"></script>
 </head>
 <body>
-	<div id="hello" class="text-white"></div>
 	<!-- navbar -->
 	<nav class="navbar">
 		<div class="navbar-nav">
@@ -36,236 +38,12 @@
 			</div>
 		</div>
 	</nav>
-	<div class="reponsive" id="reponsive">
-		<div id="reponsive-search"> 
-			<div class="reponsive-seacrh-icon">
-				<img class="reponsive-search-icon" src="assets/img/seacrh.png">
-			</div>
-				<input class="reponsive-search_input" type="text">
-			<div class="reponsive-close" onclick="reponsive_close_seacrh()">
-				<img class="close-icon" src="assets/img/close.svg">
-			</div>
-			<div>
-			</div>
-		</div>
-	</div>
-	<!-- sectino -->
-	<section class="section">
-		<div class="section-border">
-			<div class="text-white" id="tab-box">
-				<div class="section-tab tab-active" id="promotions" onclick="promotions()">Promotions</div>
-				<div class="section-tab" id="contests" onclick="contests()">Contests</div>
-				<div class="section-tab" id="announcements" onclick="announcements()">Announcements</div>
-			</div>
-			<div id="tab-line"></div>
-		</div>
-		<div id="page_1">
-			
-		<div class="promotions" >
-			<div class="text-white tab">
-				<div class="tab-item" onclick="All()">
-					<div class="tab-item-div">
-						<img class="img-fluid" id="all" src="assets/img/e.png">	
-					</div>
-					<div class="tab-item-word">
-						<span>All</span>
-					</div>
-				</div>
-				<div class="tab-item" onclick="movie_perks()">
-					<div class="tab-item-div">
-						<img class="img-fluid background" id="movie_perks" src="assets/img/a.png">	
-					</div>
-					<div class="tab-item-word">
-						<span>Movie Perks</span>
-					</div>
-				</div>
-				<div class="tab-item" onclick="bank_promos()">
-					<div class="tab-item-div">
-						<img class="img-fluid background" id="bank_promos" src="assets/img/b.png">	
-					</div>
-					<div class="tab-item-word">
-						<span>Bank Promos</span>
-					</div>
-				</div>
-				<div class="tab-item" onclick="food_beverages()">
-					<div class="tab-item-div">
-						<img class="img-fluid background" id="food_beverages" src="assets/img/c.png">	
-					</div>
-					<div class="tab-item-word">
-						<span>Food & Beverages</span>
-					</div>
-				</div>
-				<div class="tab-item" onclick="events()">
-					<div class="tab-item-div">
-						<img class="img-fluid background" id="events" src="assets/img/d.png">	
-					</div>
-					<div class="tab-item-word">
-						<span>Events</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="text-white" id="section-promotions">
-		</div>
-		</div>
-		<div id="page_2" class="announcements">
-			<div id="sections-contest">
-				<div class="announcements-div">
-					<div class="promotions-div height">
-						<img class="img-fluid height2 " src="https://gsc-statics.s3-ap-southeast-1.amazonaws.com/cms/dc0d8650-c10b-43f4-bc4e-b2e427cf49e1.jpg">
-					</div>
-					<div class="promotions-word-box">
-						<h3>Aurum Pass and regular GSC voucher extension</h3>
-						<p></p>
-					</div>
-				</div>
-				<div class="announcements-div">
-					<div class="promotions-div height">
-						<img class="img-fluid height2 " src="https://gsc-statics.s3-ap-southeast-1.amazonaws.com/cms/6330fdc4-f5ec-410b-b535-5cbff20f2c08.jpg">
-					</div>
-					<div class="promotions-word-box">
-						<h3>Conditional Movement Control Order</h3>
-						<p></p>
-					</div>
-				</div>
-				<div class="announcements-div">
-						<div class="promotions-div height">
-						</div>
-						<div class="promotions-word-box">
-				
-						</div>
-					</div>
-					<div class="announcements-div">
-						<div class="promotions-div height">
-						</div>
-						<div class="promotions-word-box">
-				
-						</div>
-					</div>
 
-			</div>
-		</div>
-	</section>
-	<footer class="footer text-white">
-		<div class="footer-item">
-			
-		<div class="footer-box">
-			<div class="box">
-				<div class="footer-word">
-					Movies
-				</div>
-				<div class="footer-word footer-word-active">
-					Now Showing
-				</div>
-				<div class="footer-word footer-word-active">
-					Advance Sales
-				</div>
-				<div class="footer-word footer-word-active">
-					Flim Festival
-				</div>
-			</div>
-			<div class="box">	
-				<div class="footer-word">
-					Promotions
-				</div>
-				<div class="footer-word footer-word-active">
-					All Promo
-				</div>
-				<div class="footer-word footer-word-active">
-					Contests
-				</div>
-			</div>
-		</div>
-		<div class="footer-box">
-			<div class="box">	
-				<div class="footer-word">
-					Cinemas
-				</div>
-				<div class="footer-word footer-word-active">
-					Cinema Experiences
-				</div>
-				<div class="footer-word footer-word-active">
-					Aurum Theatre
-				</div>
-			</div>
-			<div class="box">
-				<div class="footer-word ">
-					GSC HLB Credit Card
-				</div>
-			</div>
-			<div class="box">
-				<div class="footer-word">
-					Food & Bevarage
-				</div>
-				<div class="footer-word footer-word-active">
-					Jin Gastrobar
-				</div>
-			</div>
-			<div class="box">
-				<div class="footer-word">
-					Help
-				</div>
-				<div class="footer-word footer-word-active">
-					FAQ	
-				</div>
-				<div class="footer-word footer-word-active">
-					Privavy Policy
-				</div>
-				<div class="footer-word footer-word-active">
-					ABAC Policy
-				</div>
-				<div class="footer-word footer-word-active">
-					Whistleblowing Policy
-				</div>
-			</div>
-		</div>
-		<div class="footer-box">
-			<div class="box">
-				<div class="footer-word">
-					Showtimes
-				</div>
-			</div>
-		</div>
-		<div class="footer-box">
-			<div class="box">
-				<div class="footer-word">
-					Advertisement
-				</div>
-				<div class="footer-word text-yellow">
-					Advertise With Us
-				</div>
-			</div>
-		</div>
-		<div class="footer-box">
-			<div class="box">
-				<div class="footer-word">
-					Follow Us
-				</div>
-				<div class="footer-word text-white d-flex">
-					<div class="footer-icon"><img class="img-fluid" src="assets/img/svgexport-6.svg"></div>
-					<div class="footer-icon"><img class="img-fluid" src="assets/img/svgexport-7.svg"></div>
-					<div class="footer-icon"><img class="img-fluid" src="assets/img/svgexport-8.svg"></div>
-				</div>
-			</div>
-			<div class="box margin">
-				<div class="footer-word">
-					Download Out App
-				</div>
-				<div class="footer-word text-white d-flex">
-					<div class="footer-icon"><img class="img-fluid" src="assets/img/svgexport-9.svg"></div>
-					<div class="footer-icon"><img class="img-fluid" src="assets/img/svgexport-10.svg"></div>
-				</div>
-				<div class="footer-word button">
-					Shop
-				</div>
-			</div>
-		</div>
-		</div>
-	</footer>
-
+	<!-- When open click the navbar menu background -->
 	<div class="navbar_info" id="navbar_background" onclick="mouseDown()">
 	</div>
 
+	<!-- navbar menu -->
 	<div id="navbar-collapse">
 		<div style="height: 100%;">
 			<div class="close-box">
@@ -381,6 +159,239 @@
 		</div>
 	</div>
 
+	<!-- search bar for when using without desktop -->
+	<div class="reponsive" id="reponsive">
+		<div id="reponsive-search"> 
+			<div class="reponsive-seacrh-icon">
+				<img class="reponsive-search-icon" src="assets/img/seacrh.png">
+			</div>
+				<input class="reponsive-search_input" type="text">
+			<div class="reponsive-close" onclick="reponsive_close_seacrh()">
+				<img class="close-icon" src="assets/img/close.svg">
+			</div>
+			<div>
+			</div>
+		</div>
+	</div>
+
+
+	<section class="section">
+
+		<div class="section-border">
+			<div class="text-white" id="tab-box">
+				<div class="section-tab tab-active" id="promotions" onclick="promotions()">Promotions</div>
+				<div class="section-tab" id="contests" onclick="contests()">Contests</div>
+				<div class="section-tab" id="announcements" onclick="announcements()">Announcements</div>
+			</div>
+			<div id="tab-line"></div>
+		</div>
+
+		<!-- Promotinos Item -->
+		<div id="page_1">
+			<div class="promotions" >
+				<div class="text-white tab">
+					<div class="tab-item" onclick="All()">
+						<div class="tab-item-div">
+							<img class="img-fluid" id="all" src="assets/img/e.png">	
+						</div>
+						<div class="tab-item-word">
+							<span>All</span>
+						</div>
+					</div>
+					<div class="tab-item" onclick="movie_perks()">
+						<div class="tab-item-div">
+							<img class="img-fluid background" id="movie_perks" src="assets/img/a.png">	
+						</div>
+						<div class="tab-item-word">
+							<span>Movie Perks</span>
+						</div>
+					</div>
+					<div class="tab-item" onclick="bank_promos()">
+						<div class="tab-item-div">
+							<img class="img-fluid background" id="bank_promos" src="assets/img/b.png">	
+						</div>
+						<div class="tab-item-word">
+							<span>Bank Promos</span>
+						</div>
+					</div>
+					<div class="tab-item" onclick="food_beverages()">
+						<div class="tab-item-div">
+							<img class="img-fluid background" id="food_beverages" src="assets/img/c.png">	
+						</div>
+						<div class="tab-item-word">
+							<span>Food & Beverages</span>
+						</div>
+					</div>
+					<div class="tab-item" onclick="events()">
+						<div class="tab-item-div">
+							<img class="img-fluid background" id="events" src="assets/img/d.png">	
+						</div>
+						<div class="tab-item-word">
+							<span>Events</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-white" id="section-promotions">
+			</div>
+		</div>
+
+		<!-- Announcements Item -->
+		<div id="page_2" class="announcements">
+			<div id="sections-contest">
+				<div class="announcements-div">
+					<div class="promotions-div height">
+						<img class="img-fluid height2 " src="https://gsc-statics.s3-ap-southeast-1.amazonaws.com/cms/dc0d8650-c10b-43f4-bc4e-b2e427cf49e1.jpg">
+					</div>
+					<div class="promotions-word-box">
+						<h3>Aurum Pass and regular GSC voucher extension</h3>
+						<p></p>
+					</div>
+				</div>
+				<div class="announcements-div">
+					<div class="promotions-div height">
+						<img class="img-fluid height2 " src="https://gsc-statics.s3-ap-southeast-1.amazonaws.com/cms/6330fdc4-f5ec-410b-b535-5cbff20f2c08.jpg">
+					</div>
+					<div class="promotions-word-box">
+						<h3>Conditional Movement Control Order</h3>
+						<p></p>
+					</div>
+				</div>
+				<div class="announcements-div">
+						<div class="promotions-div height">
+						</div>
+						<div class="promotions-word-box">
+				
+						</div>
+					</div>
+					<div class="announcements-div">
+						<div class="promotions-div height">
+						</div>
+						<div class="promotions-word-box">
+				
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer text-white">
+		<div class="footer-item">
+			<div class="footer-box">
+				<div class="box">
+					<div class="footer-word">
+						Movies
+					</div>
+					<div class="footer-word footer-word-active">
+						Now Showing
+					</div>
+					<div class="footer-word footer-word-active">
+						Advance Sales
+					</div>
+					<div class="footer-word footer-word-active">
+						Flim Festival
+					</div>
+				</div>
+				<div class="box">	
+					<div class="footer-word">
+						Promotions
+					</div>
+					<div class="footer-word footer-word-active">
+						All Promo
+					</div>
+					<div class="footer-word footer-word-active">
+						Contests
+					</div>
+				</div>
+			</div>
+			<div class="footer-box">
+				<div class="box">	
+					<div class="footer-word">
+						Cinemas
+					</div>
+					<div class="footer-word footer-word-active">
+						Cinema Experiences
+					</div>
+					<div class="footer-word footer-word-active">
+						Aurum Theatre
+					</div>
+				</div>
+				<div class="box">
+					<div class="footer-word ">
+						GSC HLB Credit Card
+					</div>
+				</div>
+				<div class="box">
+					<div class="footer-word">
+						Food & Bevarage
+					</div>
+					<div class="footer-word footer-word-active">
+						Jin Gastrobar
+					</div>
+				</div>
+				<div class="box">
+					<div class="footer-word">
+						Help
+					</div>
+					<div class="footer-word footer-word-active">
+						FAQ	
+					</div>
+					<div class="footer-word footer-word-active">
+						Privavy Policy
+					</div>
+					<div class="footer-word footer-word-active">
+						ABAC Policy
+					</div>
+					<div class="footer-word footer-word-active">
+						Whistleblowing Policy
+					</div>
+				</div>
+			</div>
+			<div class="footer-box">
+				<div class="box">
+					<div class="footer-word">
+						Showtimes
+					</div>
+				</div>
+			</div>
+			<div class="footer-box">
+				<div class="box">
+					<div class="footer-word">
+						Advertisement
+					</div>
+					<div class="footer-word text-yellow">
+						Advertise With Us
+					</div>
+				</div>
+			</div>
+			<div class="footer-box">
+				<div class="box">
+					<div class="footer-word">
+						Follow Us
+					</div>
+					<div class="footer-word text-white d-flex">
+						<div class="footer-icon"><img class="img-fluid" src="assets/img/svgexport-6.svg"></div>
+						<div class="footer-icon"><img class="img-fluid" src="assets/img/svgexport-7.svg"></div>
+						<div class="footer-icon"><img class="img-fluid" src="assets/img/svgexport-8.svg"></div>
+					</div>
+				</div>
+				<div class="box margin">
+					<div class="footer-word">
+						Download Out App
+					</div>
+					<div class="footer-word text-white d-flex">
+						<div class="footer-icon"><img class="img-fluid" src="assets/img/svgexport-9.svg"></div>
+						<div class="footer-icon"><img class="img-fluid" src="assets/img/svgexport-10.svg"></div>
+					</div>
+					<div class="footer-word button">
+						Shop
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
 <script type="text/javascript" src="./assets/db/promotion.json">
 </script>
 </body>
