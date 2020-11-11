@@ -398,6 +398,11 @@ body {
     margin-top: 18px;
 }
 
+.announcements-div {
+	width: 285px;;
+    margin-top: 18px;
+}
+
 .promotions-div {
 	/*height: 80%;*/
 	width: 100%;
@@ -451,7 +456,7 @@ body {
 }
 
 #page_2 {
-	display: none ;
+	display: none;
 }
 
 .footer {
@@ -471,14 +476,14 @@ body {
 	font-size: 14px;
 }
 
-.footer-word2 {
+.footer-word-active {
 	margin-bottom: 20px;
 	font-size: 12px;
 	color: #999;
 	line-height: 16px;
 }
 
-.yellow {
+.text-yellow {
 	margin-bottom: 20px;
 	font-size: 12px;
 	color: yellow;
@@ -561,6 +566,10 @@ body {
 		width: calc((100% - 10px));
 	    margin-top: 30px;
 	}
+	.announcements-div {
+			width: calc((100% - 10px));
+		    margin-top: 30px;
+		}
 
 	#section-promotions {
 		margin-left: 5px;
@@ -646,6 +655,11 @@ body {
 	    width: calc(100% - 15px) !important;
 	    margin-top: 26px;
 	}
+	.announcements-div {
+			max-width: 300px !important;
+		    width: calc(100% - 15px) !important;
+		    margin-top: 26px;
+		}
 
 	.height1{
 	    min-height: 200px !important; 
@@ -722,6 +736,10 @@ body {
 	}
 
 	.romotions-div {
+		max-width: 222px ;
+	    margin-top: 26px;
+	}
+	.announcements-div {
 		max-width: 222px ;
 	    margin-top: 26px;
 	}
