@@ -395,7 +395,17 @@ body {
 
 .romotions-div {
 	width: 285px;;
-    margin-top: 18px;
+	margin-top: 18px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.col {
+	grid-template-columns: auto auto!important;
+}
+
+.col1 {
+	grid-template-columns: auto !important;
 }
 
 .announcements-div {
@@ -564,7 +574,9 @@ body {
 
 	.romotions-div {
 		width: calc((100% - 10px));
-	    margin-top: 30px;
+		margin-top: 30px;
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 	.announcements-div {
 			width: calc((100% - 10px));
@@ -579,7 +591,10 @@ body {
 		grid-template-columns: auto auto !important;
 		overflow: hidden;
 	}
-
+	.col1 {
+		grid-template-columns: auto !important;
+		justify-content: center;
+	}
 	#sections-contest {
 		margin-left: 5px;
 		max-width: calc(102% - 5px) !important;
@@ -596,16 +611,26 @@ body {
 }
 
 @media (max-width: 1024px){
+	
+	.col {
+		grid-template-columns: auto auto!important;
+	}
+	
 	#section-promotions {
 		max-width: 970px;
 	}
 	#section-promotions {
-		margin-left: 5px;
+		margin-left: 5px !important;
 		max-width: calc(102% - 10px) !important;
 		display: grid;
 		grid-template-columns: auto auto auto;
 		overflow: hidden;
 	}
+
+	.col1 {
+		grid-template-columns: auto !important;
+	}
+
 	.tab {
 		grid-template-columns: auto auto auto auto;
 	}
@@ -653,7 +678,9 @@ body {
 	.romotions-div {
 		max-width: 300px !important;
 	    width: calc(100% - 15px) !important;
-	    margin-top: 26px;
+		margin-top: 26px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.announcements-div {
 			max-width: 300px !important;
@@ -709,6 +736,10 @@ body {
 }
 
 @media (max-width: 1400px) {
+	.col {
+		grid-template-columns: auto auto!important;
+	}
+
 	.navbar-nav {
 		max-width: 950px;
 	}
@@ -736,8 +767,10 @@ body {
 	}
 
 	.romotions-div {
-		max-width: 222px ;
-	    margin-top: 26px;
+		max-width: 222px;
+		margin-top: 26px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.announcements-div {
 		max-width: 222px ;

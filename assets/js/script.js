@@ -1,8 +1,28 @@
 
 window.onload = function what(){
+	x = $("#section-promotions")
+	all = $("#all")
+	movie = $("#movie_perks")
+	bank = $("#bank_promos")
+	food = $("#food_beverages")
+	event = $("#events")
+	navbar_collapse = $("#navbar-collapse")
+	navbar_background = $("#navbar_background")
+	html = $("#html")
+	reponsive = $("#reponsive")
+	nav_search = $("#nav-search");
+	navbar_search = $("#navbar-search");
+	search_close = $("#search-close");
+	tab_promotions = $("#promotions");
+	tab_contests = $("#contests");
+	tab_announcements = $("#announcements");
+	tab_line = $("#tab-line")
+	page1 = $("#page_1")
+	page2 = $("#page_2")
+
 	data.forEach(myFunction);
 	function myFunction(item, index) {
-		document.getElementById('section-promotions').innerHTML += 
+		x.append(
 		`
 		<div class="romotions-div">
 			<div class="promotions-div height">
@@ -12,14 +32,13 @@ window.onload = function what(){
 				<h3>` + item.title + `</h3>
 				<p>` + item.description +`</p>
 			</div>
-		</div>`
+		</div>`)
 
 	}
 };
 
 function showing(promotion_type) {
-	x = document.getElementById('section-promotions')
-	element = document.querySelectorAll(".romotions-div");
+	element = $(".romotions-div")
 	Array.prototype.forEach.call( element, function( node ) {
 		 node.parentNode.removeChild( node );
 	});
@@ -45,8 +64,8 @@ function showing(promotion_type) {
 	 data.forEach(myFunction);
 	 function myFunction(item, index) {
 	 	if(text == "all"){
-			x.innerHTML += 
-			`
+			x.attr('class', '');
+			x.append(`
 			<div class="romotions-div">
 				<div class="promotions-div height">
 					<img class="img-fluid height1 " src=`+ item.image +`>
@@ -55,213 +74,212 @@ function showing(promotion_type) {
 					<h3>` + item.title + `</h3>
 					<p>` + item.description +`</p>
 				</div>
-			</div>`
+			</div>`);
+
 		} else if(item.card_type == text) {
-		 	x.innerHTML += 
-		 	`
-		 	<div class="romotions-div">
-		 		<div class="promotions-div height">
-		 			<img class="img-fluid height1 " src=`+ item.image +`>
-		 		</div>
-		 		<div class="promotions-word-box">
-		 			<h3>` + item.title + `</h3>
-		 			<p>` + item.description +`</p>
-		 		</div>
-		 	</div>`
+			x.attr('class', '');
+			x.append(`
+			<div class="romotions-div">
+				<div class="promotions-div height">
+					<img class="img-fluid height1 " src=`+ item.image +`>
+				</div>
+				<div class="promotions-word-box">
+					<h3>` + item.title + `</h3>
+					<p>` + item.description +`</p>
+				</div>
+			</div>`);
+		if(text == "events"){
+			x.attr('class', 'col1');
 		}
+		}if(text == "movie"){
+			x.attr('class', 'col');
+		}
+
 	}
+	x.html(box)
 }
 
 
 
 function movie_perks() {
-	document.getElementById("all").style.filter = "grayscale(100%)"
-	document.getElementById("movie_perks").style.filter = "grayscale(0%)"
-	document.getElementById("bank_promos").style.filter = "grayscale(100%)"
-	document.getElementById("food_beverages").style.filter = "grayscale(100%)"
-	document.getElementById("events").style.filter = "grayscale(100%)"
+	all.css("filter", "grayscale(100%)");
+	movie.css("filter", "grayscale(0%)");
+	bank.css("filter", "grayscale(100%)");
+	food.css("filter", "grayscale(100%)");
+	event.css("filter", "grayscale(100%)");
 	var promotion_type = "movie"
 	showing(promotion_type)
 }
 
 function bank_promos() {
-	document.getElementById("all").style.filter = "grayscale(100%)"
-	document.getElementById("movie_perks").style.filter = "grayscale(100%)"
-	document.getElementById("bank_promos").style.filter = "grayscale(0%)"
-	document.getElementById("food_beverages").style.filter = "grayscale(100%)"
-	document.getElementById("events").style.filter = "grayscale(100%)"
+	all.css("filter", "grayscale(100%)");
+	movie.css("filter", "grayscale(100%)");
+	bank.css("filter", "grayscale(0%)");
+	food.css("filter", "grayscale(100%)");
+	event.css("filter", "grayscale(100%)");
 	var promotion_type = "bank"
 	showing(promotion_type)
 }
 
 function food_beverages() {
-	document.getElementById("all").style.filter = "grayscale(100%)"
-	document.getElementById("movie_perks").style.filter = "grayscale(100%)"
-	document.getElementById("bank_promos").style.filter = "grayscale(100%)"
-	document.getElementById("food_beverages").style.filter = "grayscale(0%)"
-	document.getElementById("events").style.filter = "grayscale(100%)"
+	all.css("filter", "grayscale(100%)");
+	movie.css("filter", "grayscale(100%)");
+	bank.css("filter", "grayscale(100%)");
+	food.css("filter", "grayscale(0%)");
+	event.css("filter", "grayscale(100%)");
 	var promotion_type = "food"
 	showing(promotion_type)
 }
 
 function events()  {
-	document.getElementById("all").style.filter = "grayscale(100%)"
-	document.getElementById("movie_perks").style.filter = "grayscale(100%)"
-	document.getElementById("bank_promos").style.filter = "grayscale(100%)"
-	document.getElementById("food_beverages").style.filter = "grayscale(100%)"
-	document.getElementById("events").style.filter = "grayscale(0%)"
+	all.css("filter", "grayscale(100%)");
+	movie.css("filter", "grayscale(100%)");
+	bank.css("filter", "grayscale(100%)");
+	food.css("filter", "grayscale(100%)");
+	event.css("filter", "grayscale(0%)");
 	var promotion_type = "events"
 	showing(promotion_type)
 }
 
 function All()  {
-	document.getElementById("all").style.filter = "grayscale(0%)"
-	document.getElementById("movie_perks").style.filter = "grayscale(100%)"
-	document.getElementById("bank_promos").style.filter = "grayscale(100%)"
-	document.getElementById("food_beverages").style.filter = "grayscale(100%)"
-	document.getElementById("events").style.filter = "grayscale(100%)"
+	all.css("filter", "grayscale(0%)");
+	movie.css("filter", "grayscale(100%)");
+	bank.css("filter", "grayscale(100%)");
+	food.css("filter", "grayscale(100%)");
+	event.css("filter", "grayscale(100%)");
 	var promotion_type = "All"
 	showing(promotion_type)
 }
 
 function navbar() {
-	document.getElementById('navbar-collapse').style.marginLeft = "0px";
-	document.getElementById('navbar_background').style.width = "100%";
-	document.getElementById('navbar_background').style.height = "100vh";
-	document.getElementById('html').style.overflow = "hidden";	
+	navbar_collapse.css("marginLeft", "0px");
+	navbar_background.css("width", "100%");
+	navbar_background.css("height", "100vh");
+	html.css("overflow", "hidden")
 }
 
 function mouseDown(){
-	document.getElementById('navbar-collapse').style.marginLeft = "-260px";
-	document.getElementById('navbar_background').style.width = "0%";
-	document.getElementById('navbar_background').style.height = "0vh";
-	document.getElementById('reponsive').style.display = "none";
-	document.getElementById('html').style.overflow = "";
+	navbar_collapse.css("marginLeft", "-260px");
+	navbar_background.css("width", "0%");
+	navbar_background.css("height", "0%");
+	reponsive.css("display", "none")
+	html.css("overflow", "")
 }
 
 function movies(){
-	var x = document.getElementById('movie_info');
-	if (x.style.display === "block") {
-		x.style.display = "none";
-		document.getElementById('arrow-right').style.transform = "rotate(0deg)";
+	movie_info = $("#movie_info")
+	arrow_right = $("#arrow-right")
+	if (movie_info.css("display") == "block") {
+		movie_info.css("display", "none");
+		arrow_right.css("transform", "rotate(0deg)");
 	} else {
-		x.style.display = "block";
-		document.getElementById('arrow-right').style.transform = "rotate(90deg)";
+		movie_info.css("display", "block");
+		arrow_right.css("transform", "rotate(90deg)");
 	}
 }
 
 function Promotions(){
-	var x = document.getElementById('promotions_info');
-	if (x.style.display === "block") {
-		x.style.display = "none";
-		document.getElementById('promotions-arrow-right').style.transform = "rotate(0deg)";
+	promotions_info = $("#promotions_info")
+	promotions_arrow_right = $("#promotions-arrow-right")
+	if (promotions_info.css("display") == "block") {
+		promotions_info.css("display", "none");
+		promotions_arrow_right.css("transform", "rotate(0deg)");
 	} else {
-		x.style.display = "block";
-		document.getElementById('promotions-arrow-right').style.transform = "rotate(90deg)";
+		promotions_info.css("display", "block");
+		promotions_arrow_right.css("transform", "rotate(90deg)");
 	}
 }
 
 function Cinemas(){
-	var x = document.getElementById('cinemas_info');
-	if (x.style.display === "block") {
-		x.style.display = "none";
-		document.getElementById('cinemas-arrow-right').style.transform = "rotate(0deg)";
+	cinemas_info = $("#cinemas_info")
+	cinemas_arrow_right = $("#cinemas-arrow-right")
+	if (cinemas_info.css("display") == "block") {
+		cinemas_info.css("display", "none");
+		cinemas_arrow_right.css("transform", "rotate(0deg)");
 	} else {
-		x.style.display = "block";
-		document.getElementById('cinemas-arrow-right').style.transform = "rotate(90deg)";
+		cinemas_info.css("display", "block");
+		cinemas_arrow_right.css("transform", "rotate(90deg)");
 	}
 }
 
 function Food(){
-	var x = document.getElementById('food_info');
-	if (x.style.display === "block") {
-		x.style.display = "none";
-		document.getElementById('food-arrow-right').style.transform = "rotate(0deg)";
+	food_info = $("#food_info")
+	food_arrow_right = $("#food-arrow-right")
+	if (food_info.css("display") == "block") {
+		food_info.css("display", "none");
+		food_arrow_right.css("transform", "rotate(0deg)");
 	} else {
-		x.style.display = "block";
-		document.getElementById('food-arrow-right').style.transform = "rotate(90deg)";
+		food_info.css("display", "block");
+		food_arrow_right.css("transform", "rotate(90deg)");
 	}
 }
 
 function Help(){
-	var x = document.getElementById('help_info');
-	if (x.style.display === "block") {
-		x.style.display = "none";
-		document.getElementById('help-arrow-right').style.transform = "rotate(0deg)";
+	help_info = $("#help_info")
+	help_arrow_right = $("#help-arrow-right")
+	if (help_info.css("display") == "block") {
+		help_info.css("display", "none");
+		help_arrow_right.css("transform", "rotate(0deg)");
 	} else {
-		x.style.display = "block";
-		document.getElementById('help-arrow-right').style.transform = "rotate(90deg)";
+		help_info.css("display", "block");
+		help_arrow_right.css("transform", "rotate(90deg)");
 	}
 }
 
 function search() {
-	var x = document.getElementById('nav-search');
-	var y = document.getElementById('navbar-search');
-	var z = document.getElementById('search-close');
-	if ((screen.width>1024)) {
-		x.style.display = "flex";
-		y.style.display = "none";
-		z.style.display = "block";
+	if ((screen.width > 1024)) {
+		nav_search.css("display", "flex");
+		navbar_search.css("display", "none");
+		search_close.css("display", "block");
 	} else {
-		document.getElementById('reponsive').style.display = "block ";
-		document.getElementById('navbar_background').style.width = "100%";
-		document.getElementById('navbar_background').style.height = "100vh";
+		reponsive.css("display", "block");
+		navbar_background.css("width", "100%");
+		navbar_background.css("height", "100vh");
 	}
 }
 
 function close_seacrh() {
-	var x = document.getElementById('nav-search');
-	var y = document.getElementById('navbar-search');
-	var z = document.getElementById('search-close');
-		x.style.display = "none";
-		y.style.display = "block";
-		z.style.display = "none";
+	nav_search.css("display", "none");
+	navbar_search.css("display", "block");
+	search_close.css("display", "none");
 }
 
 function promotions() {
-	document.getElementById("promotions").style.color = "yellow";
-	document.getElementById("contests").style.color = "white";
-	document.getElementById("announcements").style.color = "white";
-	var x = document.getElementById('tab-line');
-		x.style.transform = "translate3d(0px, 0px, 0px)";
-		x.style.width = "115px"
-
-	document.getElementById("page_1").style.display = "block"
-	document.getElementById("page_2").style.display = "none"
+	tab_promotions .css("color", "yellow");
+	tab_contests.css("color", "white");
+	tab_announcements.css("color", "white");
+	tab_line.css("transform", "translate3d(0px, 0px, 0px)")
+	tab_line.css("width", "115px")
+	page1.css("display", "block");	
+	page2.css("display", "none");	
 }
 
 function contests() {
-	document.getElementById("promotions").style.color = "white";
-	document.getElementById("contests").style.color = "yellow";
-	document.getElementById("announcements").style.color = "white";
-	var x = document.getElementById('tab-line');
-		x.style.transform = "translate3d(135px, 0px, 0px)";
-		x.style.width = "115px"
-	document.getElementById("page_1").style.display = "none"
-	document.getElementById("page_2").style.display = "none"
+	tab_promotions .css("color", "white");
+	tab_contests.css("color", "yellow");
+	tab_announcements.css("color", "white");
+	tab_line.css("transform", "translate3d(135px, 0px, 0px)")
+	tab_line.css("width", "115px")
+	page1.css("display", "none");	
+	page2.css("display", "none");
 }
 
 function announcements() {
-	document.getElementById("promotions").style.color = "white";
-	document.getElementById("contests").style.color = "white";
-	document.getElementById("announcements").style.color = "yellow";
-
-	var x = document.getElementById('tab-line');
-		x.style.transform = "translate3d(270px, 0px, 0px)";
-		x.style.width = "150px"
-	document.getElementById("page_1").style.display = "none"
-	document.getElementById("page_2").style.display = "block"
+	tab_promotions .css("color", "white");
+	tab_contests.css("color", "white");
+	tab_announcements.css("color", "yellow");
+	tab_line.css("transform", "translate3d(270px, 0px, 0px)")
+	tab_line.css("width", "150px")
+	page1.css("display", "none");	
+	page2.css("display", "block");
 }
 
 function reponsive_close_seacrh() {
-	document.getElementById('reponsive').style.display = "none";
-	document.getElementById('navbar_background').style.width = "0%";
-	document.getElementById('navbar_background').style.height = "0vh";
-	var x = document.getElementById('nav-search');
-	var y = document.getElementById('navbar-search');
-	var z = document.getElementById('search-close');
-		x.style.display = "none";
-		y.style.display = "block";
-		z.style.display = "none";
+	reponsive.css("display", "none")
+	navbar_background.css("width", "0%");
+	navbar_background.css("height", "0%");
+	nav_search.css("display", "none")
+	navbar_search.css("display", "block")
+	search_close.css("display", "none")
 }
 
